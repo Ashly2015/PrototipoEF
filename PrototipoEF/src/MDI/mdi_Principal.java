@@ -19,7 +19,7 @@ public class mdi_Principal extends javax.swing.JFrame {
 
     private static String c;
     private static String u;
-    public static String BD = "jdbc:mysql://localhost/hotel_general";
+    public static String BD = "jdbc:mysql://localhost/EF";
     public static String Usuario = "root";
     public static String Contraseña = "Polo.2015";
 
@@ -32,7 +32,7 @@ public class mdi_Principal extends javax.swing.JFrame {
     public void get_usuario() {
         try {
             Connection cn = DriverManager.getConnection(mdi_Principal.BD, mdi_Principal.Usuario, mdi_Principal.Contraseña);
-            PreparedStatement pst = cn.prepareStatement("select * from usuario_hoteleria where nombre_usuario = ?");
+            PreparedStatement pst = cn.prepareStatement("select * from usuario where nombre_usuario = ?");
             pst.setString(1, labelusuario.getText().trim());
 
             ResultSet rs = pst.executeQuery();
@@ -100,7 +100,7 @@ public class mdi_Principal extends javax.swing.JFrame {
         initComponents();
         setLocationRelativeTo(null);
         this.setExtendedState(mdi_Principal.MAXIMIZED_BOTH);
-        this.setTitle("Hotel");
+        this.setTitle("Rachel Ashly Nicole Barrios Ramirez 9959-18-649");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         labelusuario.setBounds(10, 10, 160, 51);
         c = labelc.getText().trim();

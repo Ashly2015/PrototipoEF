@@ -56,7 +56,7 @@ public class inf_Mantenimiento_Tipo_Cliente extends javax.swing.JInternalFrame {
     public void get_usuario(){
         try {
             Connection cn = DriverManager.getConnection(mdi_Principal.BD, mdi_Principal.Usuario, mdi_Principal.Contraseña);
-            PreparedStatement pst = cn.prepareStatement("select * from usuario_hoteleria where nombre_usuario = ?");
+            PreparedStatement pst = cn.prepareStatement("select * from usuario where id_usuario = ?");
             pst.setString(1, labelusuario.getText().trim()); 
 
             ResultSet rs = pst.executeQuery();
