@@ -45,7 +45,7 @@ public class Login extends javax.swing.JFrame {
     }
 
     public void bitacora_inicio() {
-        get_usuario();
+        
         //Desciframos la fecha
         java.util.Date fechaN = fecha.getDate();
         long fecha = fechaN.getTime();
@@ -237,7 +237,7 @@ public class Login extends javax.swing.JFrame {
                 }
                 if (txtUsuario.getText().equals(nombre) && co.equals(contra)) {
                     JOptionPane.showMessageDialog(null, "Bienvenido\n", "Mensaje de bienvenida", JOptionPane.INFORMATION_MESSAGE);
-                    
+                   //bitacora_inicio();
                     mdi_Principal principal = new mdi_Principal();
                     mdi_Principal.labelusuario.setText(nombre);
                     mdi_Principal.labelc.setText(contra);
